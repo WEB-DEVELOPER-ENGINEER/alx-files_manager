@@ -188,15 +188,13 @@ const fileUtils = {
   },
 
   /**
-   * Transform _id into id in a file document
    * @doc {object} document to be processed
    * @return {object} processed document
    */
   processFile(doc) {
-    const file = { id: doc._id, ...doc };
+    const file = { ...doc };
 
     delete file.localPath;
-    delete file._id;
     return file;
   },
 
