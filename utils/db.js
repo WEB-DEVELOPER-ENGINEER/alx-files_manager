@@ -23,7 +23,7 @@ class DBClient {
   }
 
   /**
-   * Checks if connection to Redis is Alive
+   * Checks if connection to mongo is Alive
    * @return {boolean} true if connection alive or false if not
    */
 

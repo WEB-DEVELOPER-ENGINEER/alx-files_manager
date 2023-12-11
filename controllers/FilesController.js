@@ -67,7 +67,6 @@ class FilesController {
     );
 
     if (validationError) { return response.status(400).send({ error: validationError }); }
-    if (fileParams.parentId !== 0 && !basicUtils.isValidId(fileParams.parentId)) { return response.status(400).send({ error: 'Parent not found' }); }
     const { error, code, newFile } = await fileUtils.saveFile(
       userId,
       fileParams,
